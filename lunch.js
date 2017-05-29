@@ -13,16 +13,24 @@
  * in minutes.
  */
 
-function whatToDoForLunch(hungry, availableTime) {
-  console.log("I don't know what to do!");
-}
 
+function whatToDoForLunch(hungry, availableTime) {
+  if (hungry === false && availableTime < 20) {
+    return "Time for a Snack";
+  } else if (hungry === false && 20 < availableTime < 30) {
+    return "I ll go find a place";
+  } else if (hungry) {
+    return "keep working";
+  }
+}
+console.log(whatToDoForLunch(false,25));
 
 /*
- * This is some test runner code that's simply calling our whatToDoForLunch function
+ * This is some hunferdstest runner code that's simply calling our whatToDoForLunch function
  * defined above to verify we're making the right decisions. Do not modify it!
  */
 
+/*
 console.log("I'm hungry and I have 20 minutes for lunch.");
 whatToDoForLunch(true, 20);
 console.log("---");
@@ -36,4 +44,4 @@ whatToDoForLunch(false, 30);
 console.log("---");
 
 console.log("I'm hungry and I have 15 minutes for lunch.");
-whatToDoForLunch(true, 15);
+whatToDoForLunch(true, 15);*/
